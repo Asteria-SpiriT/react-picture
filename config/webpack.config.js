@@ -17,7 +17,7 @@ module.exports = {
         app: './src/index.jsx'
     },
     output: {
-        path: path.join(__dirname, 'dist'),
+        path: path.join(__dirname, '../dist'),
         filename: '[name].js'
     },
     resolve: {
@@ -27,7 +27,7 @@ module.exports = {
     module: {
         loaders
     },
-    devtool: 'eval-source-map',
+    devtool: '#source-map',
     devServer: {
         contentBase: './dist',
         hot: true,
@@ -35,12 +35,6 @@ module.exports = {
         port: PORT
     },
     plugins: [
-        // new webpack.optimize.UglifyJsPlugin({
-        //     comments: false,
-        //     compress: {
-        //         warnings: false
-        //     }
-        // }),
         new webpack.HotModuleReplacementPlugin(),
         new ExtractTextPlugin({
             filename: 'css/vendor.css',
@@ -48,7 +42,7 @@ module.exports = {
             allChunks: true
         }),
         new HtmlWebpackPlugin({
-            template: 'index.html',
+            template: './index.html',
             inject: true,
             chunks: ['app']
         })
