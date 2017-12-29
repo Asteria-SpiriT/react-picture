@@ -28,7 +28,7 @@ class Routes extends Component {
                 <h3>{this.props.title}</h3>
                 <p>Hello, {this.state.name}.</p>
                 <Router>
-                    <Switch>
+                    <div>
                         <ul>
                             <li><Link to="/">Home</Link></li>
                             <li><Link to="/about">About</Link></li>
@@ -37,7 +37,7 @@ class Routes extends Component {
                         <Route exact  path="/" component={Home}/>
                         <Route path="/about" component={About}/>
                         <Route path="/detail" component={Detail}/>
-                    </Switch>
+                    </div>
                 </Router>
             </div>
         )
