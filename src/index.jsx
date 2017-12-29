@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import Router from './router';
 
-ReactDom.render( 
-    <Router title="Project"/>, 
+import Routes from './router';
+
+ReactDom.render(
+    <Routes title="Project"/>, 
     document.getElementById('app')
 );

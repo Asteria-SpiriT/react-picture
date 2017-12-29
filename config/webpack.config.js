@@ -29,7 +29,7 @@ module.exports = {
     },
     devtool: '#source-map',
     devServer: {
-        contentBase: './dist',
+        contentBase: './src',
         hot: true,
         noInfo: true,
         port: PORT

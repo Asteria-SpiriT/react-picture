@@ -14,4 +14,4 @@ class Detail extends Component {
     }
 }
 
-export default Detail
+export default Detail;

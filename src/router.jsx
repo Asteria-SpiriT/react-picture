@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowerRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 
 import Home from './components/home';
 import About from './components/about';
@@ -15,6 +15,7 @@ class Routes extends Component {
 
     componentWillMount (){
         console.log(`willMount`);
+        
     }
 
     componentDidMount (){
@@ -43,4 +44,4 @@ class Routes extends Component {
     }
 }
 
-export default Routes
+export default Routes;
