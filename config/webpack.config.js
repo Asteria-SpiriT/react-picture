@@ -29,9 +29,11 @@ module.exports = {
     },
     devtool: '#source-map',
     devServer: {
-        contentBase: './src',
+        contentBase: './dist',
         hot: true,
         noInfo: true,
+        // serve index.html in place of 404 responses to allow HTML5 history
+        historyApiFallback: true,
         port: PORT
     },
     plugins: [
