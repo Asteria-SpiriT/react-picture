@@ -1,14 +1,14 @@
 export const INCREMENT = 'INCREMENT';
 export const DECREMENT = 'DECREMENT';
 
-export function addCount(num){
+export const addCount = (num) => {
     return {
         type: INCREMENT,
         num
     }
 }
 
-export function decreCount(num) {
+export const decreCount = (num) => {
     return {
         type: DECREMENT,
         num

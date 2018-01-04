@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import { connect } from "react-redux";
 import { BrowserRouter as Router, HashRouter, Route, Link, Switch } from 'react-router-dom';
 
-import { addCount, decreCount } from "./redux/actions";
-
 import Home from './components/home';
 import About from './components/about';
 import Detail from './components/detail';
@@ -23,19 +21,19 @@ class Routes extends Component {
     }
 
     componentWillMount (){
-        console.log(`willMount`);
+        
     }
 
     componentDidMount (){
-        console.log(`didMount`);
+        
     }
 
     render (){
         return (
             <div className="content">
                 <h3>{this.props.title}</h3>
-                <p>Hello, {this.state.name}!!</p>
-                <span>{this.props.state}</span>
+                <p>Hello, {this.state.name}!</p>
+                <span>{this.props.state.count}</span>
                 <Router>
                     <div>
                         <ul>

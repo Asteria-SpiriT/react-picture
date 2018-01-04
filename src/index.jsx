@@ -1,17 +1,21 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import { createStore } from "redux";
+import { createStore, combineReducers } from "redux";
 import { Provider } from 'react-redux';
 
 import Routes from './router';
-// import Routes from "./visibleRoute";
-import counter from './redux/reducers';
-import { addCount, decreCount } from "./redux/actions";
+import counter from './redux/reducers/counterReducers';
+import todoApp from "./redux/reducers/visiblityReducers";
 
-let store = createStore(counter);
+const visiblityCom = combineReducers({
+    count: counter,
+    todoList: todoApp
+});
+let store = createStore(visiblityCom);
 
 // 监控state变化输出state的值
 store.subscribe( () => console.log(store.getState()));
+console.log(store.getState());
 
 ReactDom.render(
     <Provider store={store}>

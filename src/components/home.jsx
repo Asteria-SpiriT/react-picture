@@ -1,10 +1,9 @@
 import '../styles/index.scss';
 
 import React, { Component } from 'react';
-import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
-import { addCount, decreCount } from "../redux/actions";
+import { addCount, decreCount } from "../redux/actions/counterActions";
 
 const mapStateToProps = state => {
     return {
@@ -29,10 +28,10 @@ class Home extends Component {
     }
 
     addHandlers (){
-        this.props.onAddClick();
+        this.props.onAddClick(2);
     }
     decreHandlers (){
-        this.props.onDecClick();
+        this.props.onDecClick(1);
     }
     render (){
         return (
@@ -45,9 +44,9 @@ class Home extends Component {
     }
 }
 
-const visibleHome = connect(
+Home = connect(
     mapStateToProps,
     mapDispatchToProps
 )(Home)
 
-export default visibleHome;
+export default Home;
